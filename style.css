@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+/* ---------HOME PAGE----- */
+
+/* NAVIGATION BAR */
+.navbar{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(162, 44, 41);
+    display: flex;
+    box-shadow: 0 5px 5px gray;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 999;
+}
+.navbar-logo{
+    font-size: 1.5rem;
+    padding: 10px 10px 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    color:rgb(214, 213, 201) ;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.microscope{
+    color: rgb(214, 213, 201);
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    align-content: center;
+    font-size: 1.5rem;
+}
+.nav-link{
+    font-size: 1.25rem;
+    padding: 0 18px 0 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color:rgb(214, 213, 201) ;
+    height: 100%;
+    align-content: center;
+}
+.nav-link:hover{
+    background-color: rgb(214, 213, 201);
+    color: rgb(162, 44, 41);
+}
+.a1{
+    text-decoration: none;
+    height: 100%;
+}
+#check{
+height: 0;
+width: 0;
+}
+.menu-open{
+    color: rgb(214, 213, 201);
+    align-content: center;
+    font-size: 1.5rem;
+    display: none;
+}
+.menu-close{
+    color: rgb(214, 213, 201);
+    align-content: center;
+    font-size: 1.5rem;
+    display: none;
+}
+.link-container{
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}
+@media(max-width:730px) {
+    .menu-open{
+        cursor: pointer;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top:0;
+        padding:15px 20px 10px 10px;
+        align-content: center;
+        z-index: 1;
+        transition: all 0.5s linear;
+    }
+    .link-container{
+        flex-direction: column;
+        background-color: rgb(162, 44, 41);
+        height: 100% vh;
+        position:fixed;
+        right: -100%;
+        top:60px;
+        box-shadow: -5px 0 5px gray;
+        transition: all 0.5s linear;
+        z-index:999;
+    }    
+    .nav-link{
+        height: max-content;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 200px;
+    }
+    .a1{
+        height: max-content;
+    }
+    #check:checked ~ .link-container{
+        right: 0%;
+    }
+    #check:checked + .menu-close{
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top:0;
+        padding:15px 20px 10px 10px;
+        align-content: center;
+        display: inline-block;
+        z-index:2;
+        background-color:rgb(162, 44, 41);
+    }
+}
+/* MAIN BODY */
+body{
+    background-color: rgba(214, 213, 201, 0.555);
+}
+.body{
+    display: flex;
+    z-index: -1;
+    margin-top: 20px;
+}
+.headline{
+    padding-top: 60px;
+}
+.college-name{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dept{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    color: rgb(162, 44, 41);
+}
+.notification{
+    height:500px;
+    width: 40%;
+    background-color: aliceblue ;
+    margin: 25px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 5px 5px gray;
+}
+.notification-head{
+    height:50px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    background-color: rgb(162, 44, 41);
+    border-radius: 25px 25px 0 0;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color:rgb(214, 213, 201);
+}
+.notification-content{
+    height:50px;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 1.15rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color:rgb(0, 0, 0);
+    padding-left: 20px;
+}
+.main-content{
+    width: 60%;
+}
+.q1{
+    margin-top: 40px;
+    font-size: 1.5rem;
+    padding:10px 20px 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    background-color: rgb(162, 44, 41);
+    color: rgb(214, 213, 201);
+    width: max-content;
+    box-shadow: 3px 3px 5px gray;
+    border-radius: 0px 10px 10px 0;
+    display: inline-block;
+}
+.ans1{
+    margin-top: 40px;
+    font-size: 1.35rem;
+    padding:10px 20px 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.microbes-img{
+    background-image: url("pathogen-microorganisms-set.png");
+    background-size: cover;
+    height: 80px;
+    width:80px;
+    display: inline-block;
+    position: relative;
+    top: 30px;
+}
+.video{
+    display: flex;
+    background-color: rgb(162, 44, 41);
+    margin: 10px;
+    border-radius: 25px;
+}
+.video-1{
+    height:500px;
+    padding: 30px;
+    border-radius: 25px;
+}
+.video-content{
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-left: 20px;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: rgb(214, 213, 201);
+}
+
+
+@media (max-width:920px){
+    .body{
+        flex-wrap: wrap;
+    }
+    .main-content{
+        width: 100%;
+    }
+    .notification{
+        width: 100%;
+    }
+    .video{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+}
+/* FOOTER */
+.footer{
+    background-color:#0a100d ;
+    padding: 20px;
+    display: flex;
+    width: 100%vw;
+;
+}
+.f1,.f2{
+    color: rgb(214, 213, 201);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    padding: 10px 10px 10px 10px;
+}
+.a2{
+    text-decoration: none;
+    color: rgb(214, 213, 201);
+}
+.a2:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:730px){
+    .footer{
+        flex-wrap: wrap;
+    }
+}
+
+/* -------ABOUT PAGE--------- */
+
+.body-abt{
+    margin-bottom: 30px;
+}
+.clg{
+    margin-top: 40px;
+    font-size: 1.5rem;
+    padding:10px 20px 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    background-color: rgb(162, 44, 41);
+    color: rgb(214, 213, 201);
+    width: max-content;
+    box-shadow: 3px 3px 5px gray;
+    border-radius: 0px 10px 10px 0;
+    display: inline-block;
+}
+.clg-info{
+    margin-top: 40px;
+    font-size: 1.15rem;
+    padding:10px 20px 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+
+}
+.dep{
+    margin-top: 40px;
+    font-size: 1.5rem;
+    padding:10px 20px 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    background-color: rgb(162, 44, 41);
+    color: rgb(214, 213, 201);
+    width: max-content;
+    box-shadow: 3px 3px 5px gray;
+    border-radius: 0px 10px 10px 0;
+    display: inline-block;
+}
+.dep-info{
+    margin-top: 40px;
+    font-size: 1.15rem;
+    padding:10px 20px 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    padding-left: 30px;
+
+}
+/* -----STUDY PAGE------- */
+.study-body{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.study-headline{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.25rem;
+    color: rgb(162, 44, 41);
+}
+.link-container-study{
+    width:400px;
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+}
+.link-study{
+    height: 60px;
+    width:100%;
+    margin: 2px;
+    background-color: rgb(127, 208, 255);
+    align-content: center;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 3px gray;
+}
+.link-study:hover{
+    transform: scale(1.05);
+    background-color: rgb(0, 72, 114);
+    color: aliceblue;
+}
+.studya{
+    text-decoration: none;
+    color:black;
+}
+/* B.Sc. Sem I - Study Page */
+.link-study-bscsem1{
+    height: 60px;
+    width:100%;
+    margin: 2px;
+    background-color: rgb(255, 142, 142);
+    align-content: center;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 3px gray;
+}
+.link-study-bscsem1:hover{
+    transform: scale(1.05);
+    background-color: rgb(207, 0, 0);
+    color: aliceblue;
+}
+/* Structure of Bacteria */
+.str-bac-headline{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.25rem;
+    color: rgb(162, 44, 41);
+}
+.study-bacteria{
+    padding: 20px;
+}
+.playlist-strbac{
+    height: max-content;
+    width: 100%vw;
+    background-color: rgb(162, 44, 41);
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+}
+.thum-1{
+    height: 90%;
+    padding: 10px;
+    align-content: center;
+    align-self: center;
+    border-radius: 20px;
+}
+.thum-content{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(214, 213, 201);
+    font-size: 1.25rem;
+    padding-top: 15px ;
+    padding-left: 20px;
+}
+.playlist-link{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(214, 213, 201);
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+.playlist-link:hover{
+    text-decoration: underline;
+}
+@media (max-width:780px){
+    .playlist-strbac{
+        flex-wrap: wrap;
+    }
+}
+.str-bac-headline-quiz{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    color: rgb(162, 44, 41);
+    font-weight: bold;
+}
+.quiz1{
+    align-content: center;
+    padding: 20px;
+    background-color: rgb(255, 228, 106);
+    width: 100%vw;
+    font-weight:500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size : 1rem;
+    padding-bottom : 40px;
+    border: 2px solid black;
+}
+#result, #remark{
+    color: rgb(255, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+}
+.quiz-button{
+    background-color: aqua;
+    color: blue;
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    transition: all 0.25s linear;
+}
+.quiz-button:hover{
+    background-color: blue;
+    color: aquamarine;
+    transform: scale(1.05);
+}
