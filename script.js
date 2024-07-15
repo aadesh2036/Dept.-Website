@@ -42,7 +42,7 @@ function showResult(){
     marks++
     }
     document.getElementById("result").innerHTML="You've scored " + marks + " out of 10"
-    if(marks>=10 && marks<=15){
+    if(marks === 10){
         document.getElementById("remark").innerHTML="Excellent! Continue your hardwork"
     }
     else if(marks>=5 && marks<10){
@@ -51,10 +51,11 @@ function showResult(){
     else{
          document.getElementById("remark").innerHTML="Find where you lack and improve"
     }
-
+    document.querySelector(".ans").style.backgroundColor="lightgreen"
 }
 
 function clearForm(){
     document.getElementById("result").innerHTML=""
     document.getElementById("remark").innerHTML=""
+    document.querySelector(".ans").style.backgroundColor=""
 }
