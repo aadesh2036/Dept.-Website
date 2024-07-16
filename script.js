@@ -51,11 +51,20 @@ function showResult(){
     else{
          document.getElementById("remark").innerHTML="Find where you lack and improve"
     }
-    document.querySelector(".ans").style.backgroundColor="lightgreen"
+
+    let a = document.getElementsByClassName("ans")
+    for(i=0;i < a.length; i++){
+        a[i].style.backgroundColor="lightgreen"
+    }
+
 }
 
 function clearForm(){
     document.getElementById("result").innerHTML=""
     document.getElementById("remark").innerHTML=""
     document.querySelector(".ans").style.backgroundColor=""
+    let a = document.getElementsByClassName("ans")
+    for(i=0;i < a.length; i++){
+        a[i].style.backgroundColor=""
+    }
 }
