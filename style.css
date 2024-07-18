@@ -254,6 +254,9 @@ body{
         flex-wrap: wrap;
         padding: 20px;
     }
+    .video-1{
+        width: 100%;
+    }
 }
 /* FOOTER */
 .footer{
