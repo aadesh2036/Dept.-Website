@@ -79,3 +79,15 @@ function clearForm(){
         a[i].style.backgroundColor=""
     }
 }
+
+
+    var listItems = document.getElementsByClassName("notification-list-items");
+    for (let i = 0; i < listItems.length ; i++){
+        if (listItems[i].innerHTML === ""){
+        listItems[i].style.display ="none";
+        }
+    }
+
+
+        
+
